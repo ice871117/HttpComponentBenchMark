@@ -24,7 +24,7 @@ import io.netty.channel.SimpleChannelInboundHandler
 
 
 /*
- * Author: wiizhang@tencent.com
+ * Author: wiizhang
  * Time: 2019/1/18
  */
 

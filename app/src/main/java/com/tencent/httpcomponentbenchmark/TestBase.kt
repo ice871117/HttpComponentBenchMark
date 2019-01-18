@@ -3,7 +3,7 @@ package com.tencent.httpcomponentbenchmark
 import java.util.concurrent.ConcurrentHashMap
 
 /*
- * Author: wiizhang@tencent.com
+ * Author: wiizhang
  * Time: 2019/1/18
  */
  

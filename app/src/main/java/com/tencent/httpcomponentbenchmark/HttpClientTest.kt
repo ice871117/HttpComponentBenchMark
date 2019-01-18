@@ -17,7 +17,7 @@ import org.apache.http.message.BasicHeader
 
 
 /*
- * Author: wiizhang@tencent.com
+ * Author: wiizhang
  * Time: 2019/1/18
  */
 
