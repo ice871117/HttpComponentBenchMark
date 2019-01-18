@@ -89,7 +89,7 @@ class OkHttpTest: AbsTestBase() {
             Log.i(TAG, "Response: \r\n")
             response.body()?.source()?.let {
                 source ->
-                val content = source.readByteString().toString()
+                val content = String(source.readByteArray())
                 Log.i(TAG, content)
             }
             Log.i(TAG, "TimeConsume ${getTimeConsume(request)}")

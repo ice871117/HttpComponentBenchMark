@@ -134,6 +134,8 @@ class NettyTest : AbsTestBase() {
 
     inner class HttpClientHandler(private val initializer: HttpClientInitializer) : SimpleChannelInboundHandler<HttpObject>() {
 
+        val strBuf = StringBuffer()
+
         public override fun channelRead0(ctx: ChannelHandlerContext, msg: HttpObject) {
             if (msg is HttpResponse) {
                 Log.i(TAG, "STATUS: ${msg.status()}")
@@ -148,11 +150,11 @@ class NettyTest : AbsTestBase() {
                 }
             }
             if (msg is HttpContent) {
-                val responseContent = msg.content().toString(CharsetUtil.UTF_8)
-                Log.i(TAG, responseContent)
+                strBuf.append(msg.content().toString(CharsetUtil.UTF_8))
 
                 if (msg is LastHttpContent) {
                     ctx.close()
+                    Log.i(TAG, "Response: $strBuf")
                     Log.i(TAG, "TimeConsume: ${getTimeConsume(initializer)}")
                 }
             }

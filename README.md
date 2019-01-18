@@ -1,10 +1,13 @@
 # HttpComponentBenchMark
-Compare the performance among some modern http components
+Here I have chosen 3 famous http components which could be easily introduced on android platform, and test their performance.
 
 ## Conclusion
 
-> Consider network connect and data process speed in total: Netty > OkHttp > HttpClient
-> Test way: start from the request being launched, stop by the time all response has been printed in log.
+> **Network and data process**: Netty > OkHttp > HttpClient
+>
+> **Cpu usage**: HttpClient < Netty < OkHttp
+>
+> **Memory usage**: Netty < OkHttp < HttpClient
 
 ## Detail
 
@@ -18,16 +21,36 @@ https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=154780990228
 http://www.weather.com.cn/
 ```
 
-bench mark
+#### versions
 
 |Component|version|
 |:-:|:-:|
 |Netty|4.1.32|
 |OkHttp|3.12.1|
-|HttpClient|legacy|
+|HttpClient|android legacy|
+
+network environment: china telecom 4G (indoor)
+device: Samsung S9+ (Snapdragon 845)
+
+#### speed bench mark (time is measured in millisecond)
+
+> **Test way**: start from the request being launched, stop by the time all response has been printed in log.
 
 ||JBoss Netty|Square OkHttp|Apache HttpClient|
 |:--:|:--:|:--:|:--:|
-|url1|233.6|274.4|307.0|
-|url2|115.9|131.6|216.9|
-|promotion|23.9%-46.6%|10.6%-39.3%|--|
+|url1 (https file)|233.6|274.4|307.0|
+|promotion(%)|-23.9%|-10.6%|--|
+|url2 (http text)|115.9|131.6|216.9|
+|promotion(%)|-46.6%|-39.3%|--|
+
+#### performance bench mark (cpu & memory are measured in percentage and MB)
+
+> **Test way**: Repeating downloading url1, caching all the image into memory and print it in log.
+>
+||JBoss Netty|Square OkHttp|Apache HttpClient|
+|:--:|:--:|:--:|:--:|
+|cpu(%)|6%|8%|5%|
+|promotion(%)|+20%|+60%|--|
+|memory(MB)|30|91|110|
+|promotion(%)|-72.7%|-17.3%|--|
+
