@@ -3,7 +3,10 @@ Compare the performance among some modern http components
 
 ## Conclusion
 
+> Consider network connect and data process speed in total: Netty > OkHttp > HttpClient
 > Test way: start from the request being launched, stop by the time all response has been printed in log.
+
+## Detail
 
 ##### request url1 image over https:
 ```
