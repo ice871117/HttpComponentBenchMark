@@ -18,9 +18,9 @@ Here I have chosen 3 famous http components which could be easily introduced on 
 https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1547809902281&di=e95bbe43875e038df0176f992ccd3e25&imgtype=0&src=http%3A%2F%2Fvpic.video.qq.com%2F39649808%2Fk0165g5o94a_ori_3.jpg
 ```
 
-##### request url2 text/html over http:
+##### request url2 image over http:
 ```
-http://www.weather.com.cn/
+http://article-fd.zol-img.com.cn/t_s1280x720/g5/M00/03/08/ChMkJ1w_-SiIR-chAAMs3-3Jj1IAAucCwPFOykAAyz3690.jpg
 ```
 
 #### versions

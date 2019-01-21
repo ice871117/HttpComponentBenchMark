@@ -16,17 +16,17 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         plainUseCase(NettyTest())
-//        plainUseCase(OkHttpTest())
-//        plainUseCase(HttpClientTest())
+        plainUseCase(OkHttpTest())
+        plainUseCase(HttpClientTest())
     }
 
     private fun plainUseCase(instance: ITestBase) {
-//        Log.d("TimeConsume", "======> first")
-        repeat(100000) { instance.connect(TEST_URL1) }
-//        Thread.sleep(1000L)
-//        Log.d("TimeConsume", "======> second")
-//        repeat(1) { instance.connect(TEST_URL2) }
-//        Thread.sleep(1000L)
-//        Log.w("TimeConsume", "-------------------------------")
+        Log.d("TimeConsume", "======> first")
+        repeat(1) { instance.connect(TEST_URL1) }
+        Thread.sleep(1000L)
+        Log.d("TimeConsume", "======> second")
+        repeat(1) { instance.connect(TEST_URL2) }
+        Thread.sleep(1000L)
+        Log.w("TimeConsume", "-------------------------------")
     }
 }
