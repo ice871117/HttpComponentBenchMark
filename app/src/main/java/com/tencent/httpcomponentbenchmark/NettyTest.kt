@@ -155,7 +155,7 @@ class NettyTest : AbsTestBase() {
                 if (msg is LastHttpContent) {
                     ctx.close()
                     Log.i(TAG, "Response: $strBuf")
-                    Log.i(TAG, "TimeConsume: ${getTimeConsume(initializer)}")
+                    Log.i(TAG, "$TAG TimeConsume: ${getTimeConsume(initializer)}")
                 }
             }
         }

@@ -83,7 +83,7 @@ class HttpClientTest : AbsTestBase() {
                         }
                     }
                 }
-                Log.i(TAG, "TimeConsume ${getTimeConsume(request)}")
+                Log.i(TAG, "$TAG TimeConsume ${getTimeConsume(request)}")
             } else {
                 errorHit(RuntimeException("Request failed, status = ${response.statusLine.statusCode}"))
             }

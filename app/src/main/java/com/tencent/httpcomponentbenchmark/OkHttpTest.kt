@@ -92,7 +92,7 @@ class OkHttpTest: AbsTestBase() {
                 val content = String(source.readByteArray())
                 Log.i(TAG, content)
             }
-            Log.i(TAG, "TimeConsume ${getTimeConsume(request)}")
+            Log.i(TAG, "$TAG TimeConsume ${getTimeConsume(request)}")
         }
     }
 }

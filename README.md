@@ -3,7 +3,9 @@ Here I have chosen 3 famous http components which could be easily introduced on 
 
 ## Conclusion
 
-> **Network and data process**: Netty > OkHttp > HttpClient
+> **Network and data process**:
+> Http speed: HttpClient > Netty > OkHttp
+> Https speed: OkHttp > Netty > HttpClient
 >
 > **Cpu usage**: HttpClient < Netty < OkHttp
 >
@@ -29,7 +31,7 @@ http://www.weather.com.cn/
 |OkHttp|3.12.1|
 |HttpClient|android legacy|
 
-network environment: china telecom 4G (indoor)
+network environment: china telecom WiFi
 device: Samsung S9+ (Snapdragon 845)
 
 #### speed bench mark (time is measured in millisecond)
@@ -38,10 +40,10 @@ device: Samsung S9+ (Snapdragon 845)
 
 ||JBoss Netty|Square OkHttp|Apache HttpClient|
 |:--:|:--:|:--:|:--:|
-|url1 (https file)|233.6|274.4|307.0|
-|promotion(%)|-23.9%|-10.6%|--|
-|url2 (http text)|115.9|131.6|216.9|
-|promotion(%)|-46.6%|-39.3%|--|
+|url1 (https file)|127.4|102.3|211.3|
+|promotion(%)|-39.7%|-51.6%|--|
+|url2 (http text)|97.9|102.7|68.3|
+|promotion(%)|+43.0%|+50.3%|--|
 
 #### performance bench mark (cpu & memory are measured in percentage and MB)
 
