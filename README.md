@@ -3,8 +3,8 @@ Here I have chosen 3 famous http components which could be easily introduced on 
 
 ## Conclusion
 
-> **Network and data process**:
-> Http speed: HttpClient > Netty > OkHttp
+> **Network and data process**:<br>
+> Http speed: HttpClient > Netty > OkHttp<br>
 > Https speed: OkHttp > Netty > HttpClient
 >
 > **Cpu usage**: HttpClient < Netty < OkHttp
@@ -32,7 +32,7 @@ http://www.weather.com.cn/
 |HttpClient|android legacy|
 
 network environment: china telecom WiFi
-device: Samsung S9+ (Snapdragon 845)
+<br>device: Samsung S9+ (Snapdragon 845)
 
 #### speed bench mark (time is measured in millisecond)
 
